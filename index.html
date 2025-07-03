@@ -419,41 +419,42 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .newsletter-form {
-                flex-direction: column;
-            }
-            
-           @media (max-width: 768px) {
-           .nav-links {
-           overflow-x: auto;
-           white-space: nowrap;
-           gap: 1rem;
-           padding: 0.5rem 0;
-           }
+      @media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 1rem;
+        padding: 0.5rem 0;
+        -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+        scroll-snap-type: x mandatory; /* optional */
+    }
 
-          .nav-links li {
-          flex: 0 0 auto;
-          }
+    .nav-links li {
+        flex: 0 0 auto;
+        scroll-snap-align: start; /* optional */
+    }
 
-         .nav-links a {
-         font-size: 1rem;
-         }
-         }
+    .nav-links a {
+        font-size: 1rem;
+        white-space: nowrap;
+    }
 
-            }
-            
-            .features h2,
-            .tools h2 {
-                font-size: 2rem;
+    .features h2,
+    .tools h2 {
+        font-size: 2rem;
+        
             }
         }
     </style>
