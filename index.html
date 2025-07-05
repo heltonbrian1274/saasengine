@@ -698,16 +698,48 @@
         
         camera.position.z = 50;
         
+        // Animation control variables
+        let isAnimating = true;
+        let animationId;
+        
         // Animation loop
         function animate() {
-            requestAnimationFrame(animate);
-            
-            particleSystem.rotation.x += 0.001;
-            particleSystem.rotation.y += 0.002;
-            
-            renderer.render(scene, camera);
+            if (isAnimating) {
+                animationId = requestAnimationFrame(animate);
+                
+                particleSystem.rotation.x += 0.001;
+                particleSystem.rotation.y += 0.002;
+                
+                renderer.render(scene, camera);
+            }
         }
         
+        // Viewport detection for hero section
+        const heroSection = document.querySelector('.hero');
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Hero section is visible - resume animation
+                    if (!isAnimating) {
+                        isAnimating = true;
+                        animate();
+                    }
+                } else {
+                    // Hero section is not visible - pause animation
+                    isAnimating = false;
+                    if (animationId) {
+                        cancelAnimationFrame(animationId);
+                    }
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '50px'
+        });
+        
+        heroObserver.observe(heroSection);
+        
+        // Start initial animation
         animate();
         
         // Handle window resize
