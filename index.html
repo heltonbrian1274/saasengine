@@ -5,23 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SaaS Engine - Find the Perfect Business Tools to Scale Your Growth</title>
     <meta name="description" content="Discover the best SaaS tools and business automation software to accelerate your growth. Expert reviews, comparisons, and guides to help you choose the right tools for your business.">
-        <link rel="canonical" href="https://saasengine.com/" />
+    <link rel="canonical" href="https://saasengine.com/" />
 
-    <!-- Open Graph Meta Tags -->
+    <!-- Social Media Meta Tags -->
     <meta property="og:title" content="SaaS Engine - Discover Top Tools to Scale Your Business">
     <meta property="og:description" content="Expert reviews and comparisons of top SaaS tools to grow your business.">
-    <meta property="og:image" content="https://saasengine.com/og-image.jpg"> <!-- Replace with your image URL -->
+    <meta property="og:image" content="https://saasengine.com/og-image.jpg">
     <meta property="og:url" content="https://saasengine.com/">
     <meta property="og:type" content="website">
-
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SaaS Engine - Discover Top Tools to Scale Your Business">
     <meta name="twitter:description" content="Expert reviews and comparisons of top SaaS tools to grow your business.">
-    <meta name="twitter:image" content="https://saasengine.com/og-image.jpg"> <!-- Replace with your image URL -->
+    <meta name="twitter:image" content="https://saasengine.com/og-image.jpg">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            --dark-bg: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --text-muted: #888888;
+            --border-color: #333333;
+            --shadow-primary: rgba(102, 126, 234, 0.3);
+            --shadow-secondary: rgba(255, 107, 107, 0.3);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -32,7 +43,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #0a0a0a;
+            background: var(--dark-bg);
             overflow-x: hidden;
         }
 
@@ -40,76 +51,6 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            overflow: hidden;
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            color: white;
-            max-width: 800px;
-            padding: 0 20px;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease-out 0.2s both;
-        }
-
-        .hero .tagline {
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            opacity: 0.8;
-            animation: fadeInUp 1s ease-out 0.4s both;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-            color: white;
-            padding: 15px 40px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
-            animation: fadeInUp 1s ease-out 0.6s both;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
         }
 
         /* Navigation */
@@ -144,7 +85,7 @@
         }
 
         .nav-links a {
-            color: white;
+            color: var(--text-primary);
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -153,108 +94,180 @@
             color: #667eea;
         }
 
-        /* Features Section */
-        .features {
-            padding: 6rem 0;
-            background: #1a1a1a;
-            color: white;
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: var(--primary-gradient);
+            overflow: hidden;
         }
 
-        .features h2 {
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: var(--text-primary);
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.8;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary-gradient);
+            color: var(--text-primary);
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px var(--shadow-secondary);
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 6rem 0;
+            color: var(--text-primary);
+        }
+
+        .section--dark {
+            background: var(--card-bg);
+        }
+
+        .section--darker {
+            background: #0f0f0f;
+        }
+
+        .section__title {
             text-align: center;
             font-size: 3rem;
             margin-bottom: 1rem;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: var(--primary-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .features-subtitle {
+        .section__title--secondary {
+            background: var(--secondary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section__subtitle {
             text-align: center;
             font-size: 1.3rem;
             margin-bottom: 4rem;
-            color: #888;
+            color: var(--text-muted);
         }
 
-        .features-grid {
+        /* Grid Layouts */
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 3rem;
         }
 
-        .feature-card {
+        .grid--auto-fit {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .grid--tools {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        /* Card Styles */
+        .card {
             background: linear-gradient(145deg, #2a2a2a, #1e1e1e);
             padding: 2.5rem;
             border-radius: 20px;
             text-align: center;
-            border: 1px solid #333;
+            border: 1px solid var(--border-color);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .feature-card::before {
+        .card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: var(--primary-gradient);
         }
 
-        .feature-card:hover {
+        .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
         }
 
-        .feature-icon {
+        .card__icon {
             font-size: 3rem;
             margin-bottom: 1rem;
             color: #667eea;
         }
 
-        .feature-card h3 {
+        .card__title {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: white;
+            color: var(--text-primary);
         }
 
-        .feature-card p {
-            color: #ccc;
+        .card__description {
+            color: var(--text-secondary);
             line-height: 1.6;
         }
 
-        /* Tools Section */
-        .tools {
-            padding: 6rem 0;
-            background: #0f0f0f;
-            color: white;
-        }
-
-        .tools h2 {
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
+        /* Tool Card Specific Styles */
         .tool-card {
-            background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+            background: linear-gradient(145deg, var(--card-bg), #0f0f0f);
             border-radius: 15px;
             padding: 2rem;
-            border: 1px solid #333;
+            border: 1px solid var(--border-color);
             transition: all 0.3s ease;
             position: relative;
         }
@@ -265,35 +278,32 @@
             box-shadow: 0 15px 30px rgba(102, 126, 234, 0.1);
         }
 
-        .tool-header {
+        .tool-card__title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
             margin-bottom: 1rem;
         }
 
-        .tool-name {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: white;
-        }
-
-        .tool-description {
-            color: #ccc;
+        .tool-card__description {
+            color: var(--text-secondary);
             margin-bottom: 1.5rem;
             line-height: 1.6;
         }
 
-        .tool-features {
+        .tool-card__features {
             list-style: none;
             margin-bottom: 2rem;
         }
 
-        .tool-features li {
+        .tool-card__features li {
             color: #aaa;
             margin-bottom: 0.5rem;
             padding-left: 1.5rem;
             position: relative;
         }
 
-        .tool-features li::before {
+        .tool-card__features li::before {
             content: '✓';
             position: absolute;
             left: 0;
@@ -301,10 +311,10 @@
             font-weight: bold;
         }
 
-        .tool-cta {
+        .tool-card__cta {
             display: inline-block;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
+            background: var(--primary-gradient);
+            color: var(--text-primary);
             padding: 12px 30px;
             text-decoration: none;
             border-radius: 25px;
@@ -314,38 +324,38 @@
             text-align: center;
         }
 
-        .tool-cta:hover {
+        .tool-card__cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 25px var(--shadow-primary);
         }
 
         /* Newsletter Section */
         .newsletter {
             padding: 6rem 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--primary-gradient);
             text-align: center;
-            color: white;
+            color: var(--text-primary);
         }
 
-        .newsletter h2 {
+        .newsletter__title {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
-        .newsletter p {
+        .newsletter__description {
             font-size: 1.2rem;
             margin-bottom: 2rem;
             opacity: 0.9;
         }
 
-        .newsletter-form {
+        .newsletter__form {
             max-width: 500px;
             margin: 0 auto;
             display: flex;
             gap: 1rem;
         }
 
-        .newsletter-input {
+        .newsletter__input {
             flex: 1;
             padding: 15px 20px;
             border: none;
@@ -354,9 +364,9 @@
             outline: none;
         }
 
-        .newsletter-button {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-            color: white;
+        .newsletter__button {
+            background: var(--secondary-gradient);
+            color: var(--text-primary);
             padding: 15px 30px;
             border: none;
             border-radius: 25px;
@@ -365,47 +375,47 @@
             transition: all 0.3s ease;
         }
 
-        .newsletter-button:hover {
+        .newsletter__button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+            box-shadow: 0 10px 25px var(--shadow-secondary);
         }
 
         /* Footer */
         .footer {
             background: #000;
-            color: white;
+            color: var(--text-primary);
             padding: 3rem 0;
             text-align: center;
         }
 
-        .footer-content {
+        .footer__content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-bottom: 2rem;
         }
 
-        .footer-section h3 {
+        .footer__section h3 {
             margin-bottom: 1rem;
             color: #667eea;
         }
 
-        .footer-section a {
-            color: #ccc;
+        .footer__section a {
+            color: var(--text-secondary);
             text-decoration: none;
             display: block;
             margin-bottom: 0.5rem;
             transition: color 0.3s ease;
         }
 
-        .footer-section a:hover {
+        .footer__section a:hover {
             color: #667eea;
         }
 
-        .footer-bottom {
-            border-top: 1px solid #333;
+        .footer__bottom {
+            border-top: 1px solid var(--border-color);
             padding-top: 2rem;
-            color: #888;
+            color: var(--text-muted);
         }
 
         /* Animations */
@@ -421,12 +431,8 @@
         }
 
         @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
         .floating {
@@ -434,44 +440,17 @@
         }
 
         /* Responsive Design */
-     @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero .subtitle {
-        font-size: 1.2rem;
-    }
-    
-    .newsletter-form {
-        flex-direction: column;
-    }
-    
-    .nav-links {
-        overflow-x: auto;
-        white-space: nowrap;
-        gap: 1rem;
-        padding: 0.5rem 0;
-        -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
-        scroll-snap-type: x mandatory; /* optional */
-    }
-
-    .nav-links li {
-        flex: 0 0 auto;
-        scroll-snap-align: start; /* optional */
-    }
-
-    .nav-links a {
-        font-size: 1rem;
-        white-space: nowrap;
-    }
-
-    .features h2,
-    .tools h2 {
-        font-size: 2rem;
-    }
-}
-
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero .subtitle { font-size: 1.2rem; }
+            .newsletter__form { flex-direction: column; }
+            .nav-links {
+                gap: 1rem;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .section__title { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
@@ -503,157 +482,145 @@
     </section>
 
     <!-- Features Section -->
-    <section class="features" id="features">
+    <section class="section section--dark" id="features">
         <div class="container">
-            <h2>Why Choose SaaS Engine?</h2>
-            <p class="features-subtitle">Your trusted partner in business growth through smart tool selection</p>
-            <div class="features-grid">
-                <div class="feature-card floating">
-                    <div class="feature-icon">🚀</div>
-                    <h3>Expert Reviews</h3>
-                    <p>In-depth analysis of top SaaS tools with real-world testing and honest recommendations to help you make informed decisions.</p>
+            <h2 class="section__title">Why Choose SaaS Engine?</h2>
+            <p class="section__subtitle">Your trusted partner in business growth through smart tool selection</p>
+            <div class="grid grid--auto-fit">
+                <div class="card floating">
+                    <div class="card__icon">🚀</div>
+                    <h3 class="card__title">Expert Reviews</h3>
+                    <p class="card__description">In-depth analysis of top SaaS tools with real-world testing and honest recommendations to help you make informed decisions.</p>
                 </div>
-                <div class="feature-card floating">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Smart Comparisons</h3>
-                    <p>Side-by-side tool comparisons that save you hours of research and help you find the perfect fit for your specific needs.</p>
+                <div class="card floating">
+                    <div class="card__icon">⚡</div>
+                    <h3 class="card__title">Smart Comparisons</h3>
+                    <p class="card__description">Side-by-side tool comparisons that save you hours of research and help you find the perfect fit for your specific needs.</p>
                 </div>
-                <div class="feature-card floating">
-                    <div class="feature-icon">💡</div>
-                    <h3>Growth Strategies</h3>
-                    <p>Proven automation workflows and growth hacks that successful businesses use to scale efficiently with the right tools.</p>
+                <div class="card floating">
+                    <div class="card__icon">💡</div>
+                    <h3 class="card__title">Growth Strategies</h3>
+                    <p class="card__description">Proven automation workflows and growth hacks that successful businesses use to scale efficiently with the right tools.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Tools Section -->
-    <section class="tools" id="tools">
+    <section class="section section--darker" id="tools">
         <div class="container">
-            <h2>Top SaaS Tools for Business Growth</h2>
-            <div class="tools-grid">
+            <h2 class="section__title section__title--secondary">Top SaaS Tools for Business Growth</h2>
+            <div class="grid grid--tools">
                 <div class="tool-card">
-                    <div class="tool-header">
-                        <h3 class="tool-name">ClickFunnels</h3>
-                    </div>
-                    <p class="tool-description">The ultimate sales funnel builder that helps businesses convert visitors into customers with proven templates and automation.</p>
-                    <ul class="tool-features">
+                    <h3 class="tool-card__title">ClickFunnels</h3>
+                    <p class="tool-card__description">The ultimate sales funnel builder that helps businesses convert visitors into customers with proven templates and automation.</p>
+                    <ul class="tool-card__features">
                         <li>Drag-and-drop funnel builder</li>
                         <li>High-converting templates</li>
                         <li>Email automation integration</li>
                         <li>A/B testing capabilities</li>
                     </ul>
-                    <a href="#" class="tool-cta">Start Free Trial</a>
+                    <a href="#" class="tool-card__cta">Start Free Trial</a>
                 </div>
 
                 <div class="tool-card">
-                    <div class="tool-header">
-                        <h3 class="tool-name">GetResponse</h3>
-                    </div>
-                    <p class="tool-description">Complete email marketing solution with automation, landing pages, and webinar capabilities for growing businesses.</p>
-                    <ul class="tool-features">
+                    <h3 class="tool-card__title">GetResponse</h3>
+                    <p class="tool-card__description">Complete email marketing solution with automation, landing pages, and webinar capabilities for growing businesses.</p>
+                    <ul class="tool-card__features">
                         <li>Advanced email automation</li>
                         <li>Landing page builder</li>
                         <li>Webinar platform included</li>
                         <li>E-commerce integrations</li>
                     </ul>
-                    <a href="#" class="tool-cta">Get Started Free</a>
+                    <a href="#" class="tool-card__cta">Get Started Free</a>
                 </div>
 
                 <div class="tool-card">
-                    <div class="tool-header">
-                        <h3 class="tool-name">HubSpot</h3>
-                    </div>
-                    <p class="tool-description">All-in-one CRM, marketing, and sales platform that scales with your business from startup to enterprise.</p>
-                    <ul class="tool-features">
+                    <h3 class="tool-card__title">HubSpot</h3>
+                    <p class="tool-card__description">All-in-one CRM, marketing, and sales platform that scales with your business from startup to enterprise.</p>
+                    <ul class="tool-card__features">
                         <li>Free CRM with unlimited users</li>
                         <li>Marketing automation</li>
                         <li>Sales pipeline management</li>
                         <li>Custom reporting dashboards</li>
                     </ul>
-                    <a href="#" class="tool-cta">Try HubSpot Free</a>
+                    <a href="#" class="tool-card__cta">Try HubSpot Free</a>
                 </div>
 
                 <div class="tool-card">
-                    <div class="tool-header">
-                        <h3 class="tool-name">ConvertKit</h3>
-                    </div>
-                    <p class="tool-description">Email marketing platform designed for creators and online businesses with powerful automation and segmentation.</p>
-                    <ul class="tool-features">
+                    <h3 class="tool-card__title">ConvertKit</h3>
+                    <p class="tool-card__description">Email marketing platform designed for creators and online businesses with powerful automation and segmentation.</p>
+                    <ul class="tool-card__features">
                         <li>Visual automation builder</li>
                         <li>Advanced subscriber tagging</li>
                         <li>Creator-friendly features</li>
                         <li>E-commerce integrations</li>
                     </ul>
-                    <a href="#" class="tool-cta">Start Free Trial</a>
+                    <a href="#" class="tool-card__cta">Start Free Trial</a>
                 </div>
 
                 <div class="tool-card">
-                    <div class="tool-header">
-                        <h3 class="tool-name">Salesforce</h3>
-                    </div>
-                    <p class="tool-description">World's #1 CRM platform with enterprise-grade features for sales, marketing, and customer service automation.</p>
-                    <ul class="tool-features">
+                    <h3 class="tool-card__title">Salesforce</h3>
+                    <p class="tool-card__description">World's #1 CRM platform with enterprise-grade features for sales, marketing, and customer service automation.</p>
+                    <ul class="tool-card__features">
                         <li>Enterprise CRM capabilities</li>
                         <li>AI-powered insights</li>
                         <li>Custom app development</li>
                         <li>Advanced integrations</li>
                     </ul>
-                    <a href="#" class="tool-cta">Explore Salesforce</a>
+                    <a href="#" class="tool-card__cta">Explore Salesforce</a>
                 </div>
 
                 <div class="tool-card">
-                    <div class="tool-header">
-                        <h3 class="tool-name">Thinkific</h3>
-                    </div>
-                    <p class="tool-description">Create and sell online courses with built-in marketing tools, student management, and payment processing.</p>
-                    <ul class="tool-features">
+                    <h3 class="tool-card__title">Thinkific</h3>
+                    <p class="tool-card__description">Create and sell online courses with built-in marketing tools, student management, and payment processing.</p>
+                    <ul class="tool-card__features">
                         <li>Course creation tools</li>
                         <li>Student management system</li>
                         <li>Built-in payment processing</li>
                         <li>Marketing automation</li>
                     </ul>
-                    <a href="#" class="tool-cta">Create Your Course</a>
+                    <a href="#" class="tool-card__cta">Create Your Course</a>
                 </div>
             </div>
         </div>
     </section>
 
- <!-- Newsletter Section -->
-<section class="newsletter" id="newsletter">
-    <div class="container">
-        <h2>Stay Ahead of the Curve</h2>
-        <p>Get exclusive SaaS insights, tool reviews, and growth strategies delivered to your inbox weekly.</p>
-        <form class="newsletter-form">
-            <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email Address">
-            <button type="submit" class="newsletter-button">Subscribe Free</button>
-        </form>
-    </div>
-</section>
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="newsletter">
+        <div class="container">
+            <h2 class="newsletter__title">Stay Ahead of the Curve</h2>
+            <p class="newsletter__description">Get exclusive SaaS insights, tool reviews, and growth strategies delivered to your inbox weekly.</p>
+            <form class="newsletter__form">
+                <input type="email" class="newsletter__input" placeholder="Enter your email address" required aria-label="Email Address">
+                <button type="submit" class="newsletter__button">Subscribe Free</button>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
+            <div class="footer__content">
+                <div class="footer__section">
                     <h3>SaaS Engine</h3>
                     <p>Your trusted partner in business growth through smart SaaS tool selection and automation strategies.</p>
                 </div>
-                <div class="footer-section">
+                <div class="footer__section">
                     <h3>Quick Links</h3>
                     <a href="#tools">Tool Reviews</a>
                     <a href="#comparisons">Comparisons</a>
                     <a href="#guides">Growth Guides</a>
                     <a href="#blog">Blog</a>
                 </div>
-                <div class="footer-section">
+                <div class="footer__section">
                     <h3>Categories</h3>
                     <a href="#marketing">Marketing Tools</a>
                     <a href="#sales">Sales CRM</a>
                     <a href="#automation">Automation</a>
                     <a href="#analytics">Analytics</a>
                 </div>
-                <div class="footer-section">
+                <div class="footer__section">
                     <h3>Support</h3>
                     <a href="#contact">Contact Us</a>
                     <a href="#privacy">Privacy Policy</a>
@@ -661,156 +628,203 @@
                     <a href="#affiliate">Affiliate Disclosure</a>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="footer__bottom">
                 <p>&copy; 2025 SaaS Engine. All rights reserved. | Empowering businesses through smart tool selection.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Three.js animated background
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.getElementById('hero-bg').appendChild(renderer.domElement);
+        // Animation and Performance Manager
+        class AnimationManager {
+            constructor() {
+                this.scene = null;
+                this.camera = null;
+                this.renderer = null;
+                this.particleSystem = null;
+                this.isAnimating = false;
+                this.animationId = null;
+                this.init();
+            }
 
-        // Create particles
-        const particleCount = 100;
-        const particles = new THREE.BufferGeometry();
-        const particlePositions = new Float32Array(particleCount * 3);
-        
-        for (let i = 0; i < particleCount * 3; i++) {
-            particlePositions[i] = (Math.random() - 0.5) * 100;
-        }
-        
-        particles.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3));
-        
-        const particleMaterial = new THREE.PointsMaterial({
-            color: 0xffffff,
-            size: 0.5,
-            transparent: true,
-            opacity: 0.8
-        });
-        
-        const particleSystem = new THREE.Points(particles, particleMaterial);
-        scene.add(particleSystem);
-        
-        camera.position.z = 50;
-        
-        // Animation control variables
-        let isAnimating = true;
-        let animationId;
-        
-        // Animation loop
-        function animate() {
-            if (isAnimating) {
-                animationId = requestAnimationFrame(animate);
+            init() {
+                this.setupThreeJS();
+                this.setupParticles();
+                this.setupIntersectionObserver();
+                this.setupEventListeners();
+                this.startAnimation();
+            }
+
+            setupThreeJS() {
+                this.scene = new THREE.Scene();
+                this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                this.renderer = new THREE.WebGLRenderer({ alpha: true });
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+                document.getElementById('hero-bg').appendChild(this.renderer.domElement);
+                this.camera.position.z = 50;
+            }
+
+            setupParticles() {
+                const particleCount = 100;
+                const particles = new THREE.BufferGeometry();
+                const positions = new Float32Array(particleCount * 3);
                 
-                particleSystem.rotation.x += 0.001;
-                particleSystem.rotation.y += 0.002;
+                for (let i = 0; i < particleCount * 3; i++) {
+                    positions[i] = (Math.random() - 0.5) * 100;
+                }
                 
-                renderer.render(scene, camera);
+                particles.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+                
+                const material = new THREE.PointsMaterial({
+                    color: 0xffffff,
+                    size: 0.5,
+                    transparent: true,
+                    opacity: 0.8
+                });
+                
+                this.particleSystem = new THREE.Points(particles, material);
+                this.scene.add(this.particleSystem);
+            }
+
+            setupIntersectionObserver() {
+                const heroSection = document.querySelector('.hero');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            this.resumeAnimation();
+                        } else {
+                            this.pauseAnimation();
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: '50px' });
+                
+                observer.observe(heroSection);
+            }
+
+            setupEventListeners() {
+                window.addEventListener('resize', () => this.handleResize());
+            }
+
+            handleResize() {
+                this.camera.aspect = window.innerWidth / window.innerHeight;
+                this.camera.updateProjectionMatrix();
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+            }
+
+            startAnimation() {
+                this.isAnimating = true;
+                this.animate();
+            }
+
+            animate() {
+                if (this.isAnimating) {
+                    this.animationId = requestAnimationFrame(() => this.animate());
+                    this.particleSystem.rotation.x += 0.001;
+                    this.particleSystem.rotation.y += 0.002;
+                    this.renderer.render(this.scene, this.camera);
+                }
+            }
+
+            resumeAnimation() {
+                if (!this.isAnimating) {
+                    this.isAnimating = true;
+                    this.animate();
+                }
+            }
+
+            pauseAnimation() {
+                this.isAnimating = false;
+                if (this.animationId) {
+                    cancelAnimationFrame(this.animationId);
+                }
             }
         }
-        
-        // Viewport detection for hero section
-        const heroSection = document.querySelector('.hero');
-        const heroObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Hero section is visible - resume animation
-                    if (!isAnimating) {
-                        isAnimating = true;
-                        animate();
-                    }
-                } else {
-                    // Hero section is not visible - pause animation
-                    isAnimating = false;
-                    if (animationId) {
-                        cancelAnimationFrame(animationId);
-                    }
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '50px'
-        });
-        
-        heroObserver.observe(heroSection);
-        
-        // Start initial animation
-        animate();
-        
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+        // UI Manager
+        class UIManager {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                this.setupSmoothScrolling();
+                this.setupNewsletterForm();
+                this.setupToolCTAs();
+                this.setupScrollAnimations();
+            }
+
+            setupSmoothScrolling() {
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const target = document.querySelector(anchor.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
                     });
-                }
-            });
-        });
+                });
+            }
 
-    // Newsletter form handling
-document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const emailInput = document.querySelector('.newsletter-input');
-    const email = emailInput.value.trim();
-    if (email) {
-        alert('Thank you for subscribing! You\'ll receive our weekly SaaS insights soon.');
-        emailInput.value = '';
-        emailInput.focus();
-    } else {
-        alert('Please enter a valid email address.');
-        emailInput.focus();
-    }
-});
+            setupNewsletterForm() {
+                const form = document.querySelector('.newsletter__form');
+                const input = document.querySelector('.newsletter__input');
+                
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const email = input.value.trim();
+                    
+                    if (this.validateEmail(email)) {
+                        this.showMessage('Thank you for subscribing! You\'ll receive our weekly SaaS insights soon.');
+                        input.value = '';
+                    } else {
+                        this.showMessage('Please enter a valid email address.');
+                        input.focus();
+                    }
+                });
+            }
 
+            setupToolCTAs() {
+                document.querySelectorAll('.tool-card__cta').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const toolName = button.closest('.tool-card').querySelector('.tool-card__title').textContent;
+                        console.log(`Tool clicked: ${toolName}`);
+                        this.showMessage(`Redirecting to ${toolName}...`);
+                    });
+                });
+            }
 
-        // Tool CTA button tracking
-        document.querySelectorAll('.tool-cta').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const toolName = this.closest('.tool-card').querySelector('.tool-name').textContent;
-                console.log(`User clicked on ${toolName} - Track this for affiliate analytics`);
-                // In production, you'd track this click and redirect to affiliate link
-                alert(`Redirecting to ${toolName}... (This would be your affiliate link)`);
-            });
-        });
+            setupScrollAnimations() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
 
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
+                document.querySelectorAll('.card, .tool-card').forEach(element => {
+                    element.style.opacity = '0';
+                    element.style.transform = 'translateY(50px)';
+                    element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    observer.observe(element);
+                });
+            }
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+            validateEmail(email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
 
-        // Observe all cards for scroll animations
-        document.querySelectorAll('.feature-card, .tool-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(50px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
+            showMessage(message) {
+                alert(message); // In production, use a proper notification system
+            }
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new AnimationManager();
+            new UIManager();
         });
     </script>
 </body>
